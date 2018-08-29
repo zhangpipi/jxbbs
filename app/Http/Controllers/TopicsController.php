@@ -6,6 +6,7 @@ use App\Models\Topic;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
+use function MongoDB\BSON\toPHP;
 
 class TopicsController extends Controller
 {
@@ -16,7 +17,7 @@ class TopicsController extends Controller
 
 	public function index()
 	{
-		$topics = Topic::paginate();
+		$topics = Topic::with('user', 'category')->paginate();
 		return view('topics.index', compact('topics'));
 	}
 
