@@ -41,7 +41,7 @@ use Spatie\Permission\Traits\HasRoles;
  */
 class User extends Authenticatable
 {
-    use Notifiable, HasRoles, Traits\ActiveUserHelper;
+    use Notifiable, HasRoles, Traits\ActiveUserHelper, Traits\LastActivedAtHelper;
 
     /**
      * The attributes that are mass assignable.
