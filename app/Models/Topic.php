@@ -38,6 +38,7 @@ namespace App\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Topic whereViewCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Topic withOrder($order)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Reply[] $replies
  */
 class Topic extends Model
 {
