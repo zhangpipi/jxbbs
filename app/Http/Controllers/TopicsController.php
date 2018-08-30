@@ -6,7 +6,6 @@ use App\Models\Topic;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
-use function MongoDB\BSON\toPHP;
 use App\Models\Category;
 use Auth;
 use App\Handlers\ImageUploadHandler;
