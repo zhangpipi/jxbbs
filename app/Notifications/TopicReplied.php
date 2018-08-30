@@ -34,7 +34,8 @@ class TopicReplied extends Notification implements ShouldQueue
     public function via($notifiable)
     {
         // 开启通知的频道
-        return ['database', 'mail'];
+        //return ['database', 'mail'];
+        return ['database'];
     }
 
     /**
@@ -64,6 +65,10 @@ class TopicReplied extends Notification implements ShouldQueue
         ];
     }
 
+    /**
+     * @param $notifiable
+     * @return array
+     */
     public function toDatabase($notifiable)
     {
         $topic = $this->reply->topic;
